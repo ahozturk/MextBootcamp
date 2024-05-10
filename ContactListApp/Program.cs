@@ -72,3 +72,18 @@ while (true)
     else if (selection == "4")
         UpdatePerson();
 }
+
+PersonService personService = new();
+personService.AddPerson();
+
+class PersonService
+{   
+    /// <summary>
+    /// Kişi eklemek için yazılmış olan metot.
+    /// </summary>
+    public void AddPerson()
+    {
+        
+    }
+
+}
