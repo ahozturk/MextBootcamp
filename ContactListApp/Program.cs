@@ -73,16 +73,38 @@ void DeletePerson()
 
 void UpdatePerson()
 {
-    // string name = ReadConsoleWithMessage("Please enter a name to update: ");
+    //Müberra-Kaya-123123
+    //Hakan-Kaya-345345
 
-    // int index = people.IndexOf(name);
+    string phoneNumber = ReadConsoleWithMessage("Please enter a phone number to delete: "); //234234
+    int index = -1; //-1
 
-    // string nameUpdated = ReadConsoleWithMessage("Please enter updated version: ");
+    for (int i = 0; i < people.Count; i++)
+    {
+        if (people[i].PhoneNumber == phoneNumber)
+        {
+            index = i;
+        }
+    }
 
-    // people[index] = nameUpdated;
+    if (index == -1)
+    {
+        Console.WriteLine("Person not found!");
+        return;
+    }
 
-    // Console.WriteLine($"{name} is updated to {nameUpdated}!");
-    // Console.WriteLine();
+    string nameUpdated = ReadConsoleWithMessage("Please enter name updated version: ");
+    string surnameUpdated = ReadConsoleWithMessage("Please enter surname updated version: ");
+    string phoneNumberUpdated = ReadConsoleWithMessage("Please enter phone number updated version: ");
+
+    string oldName = people[index].Name;
+
+    people[index].Name = nameUpdated;
+    people[index].Surname = surnameUpdated;
+    people[index].PhoneNumber = phoneNumberUpdated;
+
+    Console.WriteLine($"{oldName} is updated to {nameUpdated}!");
+    Console.WriteLine();
 }
 
 while (true)
