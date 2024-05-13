@@ -1,8 +1,20 @@
-﻿
-List<string> people = new()
+﻿#region no-model
+using ContactListApp;
+
+List<Person> people = new()
 {
-    "Müberra",
-    "Şeyda",
+    new Person()
+    {
+        Name = "Müberra",
+        Surname = "Kaya",
+        PhoneNumber = "1234567890"
+    },
+    new Person()
+    {
+        Name = "Şeyda",
+        Surname = "Kaya",
+        PhoneNumber = "0987654321"
+    }
 };
 
 void PrintMenu()
@@ -22,36 +34,55 @@ string ReadConsoleWithMessage(string message)
 void PrintPeople()
 {
     foreach (var person in people)
-        Console.WriteLine(person);
+        Console.WriteLine($"{person.Name}-{person.Surname}-{person.PhoneNumber}"); //Name-Surname-PhoneNumber
 }
 
 void AddPerson()
 {
     string name = ReadConsoleWithMessage("Please enter a name: ");
-    people.Add(name);
+    string surname = ReadConsoleWithMessage("Please enter a surname: ");
+    string phoneNumber = ReadConsoleWithMessage("Please enter a phone number: ");
+
+    Person person = new()
+    {
+        Name = name,
+        Surname = surname,
+        PhoneNumber = phoneNumber
+    };
+
+    people.Add(person);
     Console.WriteLine($"{name} is saved!");    
 }
 
 void DeletePerson()
 {
-    string name = ReadConsoleWithMessage("Please enter a name to delete: ");
+    string phoneNumber = ReadConsoleWithMessage("Please enter a phone number to delete: ");
+    string name = "";
+    foreach(var person in people)
+    {
+        if(person.PhoneNumber == phoneNumber)
+        {
+            name = person.Name;
+            people.Remove(person);
+            return;
+        }
+    }
 
-    people.Remove(name);
     Console.WriteLine($"{name} is deleted!");
 }
 
 void UpdatePerson()
 {
-    string name = ReadConsoleWithMessage("Please enter a name to update: ");
+    // string name = ReadConsoleWithMessage("Please enter a name to update: ");
 
-    int index = people.IndexOf(name);
+    // int index = people.IndexOf(name);
 
-    string nameUpdated = ReadConsoleWithMessage("Please enter updated version: ");
+    // string nameUpdated = ReadConsoleWithMessage("Please enter updated version: ");
 
-    people[index] = nameUpdated;
+    // people[index] = nameUpdated;
 
-    Console.WriteLine($"{name} is updated to {nameUpdated}!");
-    Console.WriteLine();
+    // Console.WriteLine($"{name} is updated to {nameUpdated}!");
+    // Console.WriteLine();
 }
 
 while (true)
@@ -65,7 +96,7 @@ while (true)
 
     else if (selection == "2")
         AddPerson();
-        
+
     else if (selection == "3")
         DeletePerson();        
 
@@ -83,7 +114,38 @@ class PersonService
     /// </summary>
     public void AddPerson()
     {
-        
+
     }
 
 }
+#endregion
+
+// using ContactListApp;
+
+//değişken tipi  değişken ismi = değer
+
+// List<Person> people = new()
+// {
+//     new Person()
+//     {
+//         Name = "Müberra",
+//         Surname = "Kaya",
+//         PhoneNumber = "1234567890"
+//     },
+//     new Person()
+//     {
+//         Name = "Şeyda",
+//         Surname = "Kaya",
+//         PhoneNumber = "0987654321"
+//     }
+// };
+
+// Person person3 = new()
+// {
+//     Name = "Hilal",
+//     Surname = "Durdaç",
+//     PhoneNumber = "8714567890"
+// };
+// Console.WriteLine($"Name: {person3.Name}");
+
+// people.Add(person3);
