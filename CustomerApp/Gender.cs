@@ -6,4 +6,5 @@ public enum Gender
     Male = 1,
     Unknown = 2,
     NotPreferToSay = 3,
+    Other = 4,
 }
