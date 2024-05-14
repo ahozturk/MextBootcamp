@@ -51,24 +51,24 @@ void AddPerson()
     };
 
     people.Add(person);
+
     Console.WriteLine($"{name} is saved!");    
 }
 
 void DeletePerson()
 {
     string phoneNumber = ReadConsoleWithMessage("Please enter a phone number to delete: ");
-    string name = "";
-    foreach(var person in people)
+
+    foreach (var person in people)
     {
-        if(person.PhoneNumber == phoneNumber)
+        if (person.PhoneNumber == phoneNumber)
         {
-            name = person.Name;
             people.Remove(person);
+            Console.WriteLine($"{person.Name} is deleted!");
             return;
         }
     }
 
-    Console.WriteLine($"{name} is deleted!");
 }
 
 void UpdatePerson()
@@ -76,7 +76,7 @@ void UpdatePerson()
     //Müberra-Kaya-123123
     //Hakan-Kaya-345345
 
-    string phoneNumber = ReadConsoleWithMessage("Please enter a phone number to delete: "); //234234
+    string phoneNumber = ReadConsoleWithMessage("Please enter a phone number to update: "); //345345
     int index = -1; //-1
 
     for (int i = 0; i < people.Count; i++)
@@ -126,48 +126,4 @@ while (true)
         UpdatePerson();
 }
 
-PersonService personService = new();
-personService.AddPerson();
-
-class PersonService
-{   
-    /// <summary>
-    /// Kişi eklemek için yazılmış olan metot.
-    /// </summary>
-    public void AddPerson()
-    {
-
-    }
-
-}
 #endregion
-
-// using ContactListApp;
-
-//değişken tipi  değişken ismi = değer
-
-// List<Person> people = new()
-// {
-//     new Person()
-//     {
-//         Name = "Müberra",
-//         Surname = "Kaya",
-//         PhoneNumber = "1234567890"
-//     },
-//     new Person()
-//     {
-//         Name = "Şeyda",
-//         Surname = "Kaya",
-//         PhoneNumber = "0987654321"
-//     }
-// };
-
-// Person person3 = new()
-// {
-//     Name = "Hilal",
-//     Surname = "Durdaç",
-//     PhoneNumber = "8714567890"
-// };
-// Console.WriteLine($"Name: {person3.Name}");
-
-// people.Add(person3);
