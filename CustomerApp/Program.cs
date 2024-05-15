@@ -67,6 +67,6 @@
 
 using CustomerApp;
 
-var newCustomer = new Customer("      ", "Öztürk");
+var newCustomer = new Customer("", "Öztürk");
 
 Console.WriteLine($"Customer: {newCustomer.Name} - {newCustomer.Surname}");

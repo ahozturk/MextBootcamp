@@ -16,12 +16,12 @@ public class Customer
     {
         //""
         if (name.Replace(" ", "").Length == 0)
-            Name = "Unknown";
+            throw new Exception("Name cannot be empty");
         else
             Name = name;
 
         if (surname.Length == 0)
-            Surname = "Unknown";
+            Name = "Unknown";
         else
             Surname = surname;
     }
