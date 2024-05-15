@@ -4,24 +4,10 @@ int totalPoint = 0;
 
 List<SurveyQuestion> surveyQuestions = new()
 {
-    new()
-    {
-        Question = "Merdivenden inerken korkuluğa tutunur musun?",
-        CorrectAnswer = "Evet",
-        WrongAnswer = "Hayır"
-    },
-    new()
-    {
-        Question = "Spor yapmayı sever misin?",
-        CorrectAnswer = "Hayır",
-        WrongAnswer = "Evet"
-    },
-    new()
-    {
-        Question = "Yükseklikten korkar mısın?",
-        CorrectAnswer = "Evet",
-        WrongAnswer = "Hayır"
-    }
+    // new("Merdivenden inerken korkuluğa tutunur musun?"),
+    // new("Spor yapmayı sever misin?", "Hayır", "Evet"),
+    // new("Yükseklikten korkar mısın?"),
+    new("Evcil hayvanın var mı?", "Yok", "Var"),
 };
 
 
