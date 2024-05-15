@@ -17,30 +17,55 @@
 //Puan 0: Yaz
 #endregion
 
+using Onedemio;
+
 int totalPoint = 0;
 
-Console.WriteLine("Merdivenden inerken korkuluğa tutunur musun? (Evet/Hayır)");
+// Console.WriteLine("Merdivenden inerken korkuluğa tutunur musun? (Evet/Hayır)");
 
-string answer1 = Console.ReadLine();
+// string answer1 = Console.ReadLine();
 
-if (answer1 == "Evet")
-    totalPoint += 1;
-
-
-Console.WriteLine("Yükseklik korkun var mı? (Var/Yok)");
-
-string answer2 = Console.ReadLine();
-
-if (answer2 == "Var")
-    totalPoint += 1;
+// if (answer1 == "Evet")
+//     totalPoint += 1;
 
 
-Console.WriteLine("Spor yapmayı sever misin? (Evet/Hayır)");
+// Console.WriteLine("Yükseklik korkun var mı? (Var/Yok)");
 
-string answer3 = Console.ReadLine();
+// string answer2 = Console.ReadLine();
 
-if (answer3 == "Hayır")
-    totalPoint += 1;
+// if (answer2 == "Var")
+//     totalPoint += 1;
+
+
+// Console.WriteLine("Spor yapmayı sever misin? (Evet/Hayır)");
+
+// string answer3 = Console.ReadLine();
+
+// if (answer3 == "Hayır")
+//     totalPoint += 1;
+
+SurveyQuestion surveyQuestion = new()
+{
+    Question = "Spor yapmayı sever misin?",
+    CorrectAnswer = "Hayır",
+    WrongAnswer = "Evet"
+};
+
+totalPoint += WriteQuestionAndGetAnswer(surveyQuestion);
+
+int WriteQuestionAndGetAnswer(SurveyQuestion surveyQuestion)
+{
+    Console.WriteLine($"{surveyQuestion.Question} ({surveyQuestion.CorrectAnswer}/{surveyQuestion.WrongAnswer})");
+
+    string answer = Console.ReadLine();
+
+    if (answer == surveyQuestion.CorrectAnswer)
+        return 1;
+    
+    else
+        return 0;
+}
+
 
 Console.WriteLine($"Değerlendirme: {totalPoint}");
 
