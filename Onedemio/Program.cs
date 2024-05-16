@@ -4,9 +4,9 @@ int totalPoint = 0;
 
 List<SurveyQuestion> surveyQuestions = new()
 {
-    // new("Merdivenden inerken korkuluğa tutunur musun?"),
-    // new("Spor yapmayı sever misin?", "Hayır", "Evet"),
-    // new("Yükseklikten korkar mısın?"),
+    new("Merdivenden inerken korkuluğa tutunur musun?"),
+    new("Spor yapmayı sever misin?", "Hayır", "Evet"),
+    new("Yükseklikten korkar mısın?"),
     new("Evcil hayvanın var mı?", "Yok", "Var"),
 };
 
