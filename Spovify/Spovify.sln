@@ -1,0 +1,31 @@
+﻿
+Microsoft Visual Studio Solution File, Format Version 12.00
+# Visual Studio Version 17
+VisualStudioVersion = 17.5.002.0
+MinimumVisualStudioVersion = 10.0.40219.1
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "Spovify.Domain", "Spovify.Domain\Spovify.Domain.csproj", "{9AE29246-77F2-40C2-BE0D-A5F19018BA2C}"
+EndProject
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "Spovify.Presentation", "Spovify.Presentation\Spovify.Presentation.csproj", "{199B30DE-FB94-448F-B72C-B68AC0D15CD7}"
+EndProject
+Global
+	GlobalSection(SolutionConfigurationPlatforms) = preSolution
+		Debug|Any CPU = Debug|Any CPU
+		Release|Any CPU = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(ProjectConfigurationPlatforms) = postSolution
+		{9AE29246-77F2-40C2-BE0D-A5F19018BA2C}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{9AE29246-77F2-40C2-BE0D-A5F19018BA2C}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{9AE29246-77F2-40C2-BE0D-A5F19018BA2C}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{9AE29246-77F2-40C2-BE0D-A5F19018BA2C}.Release|Any CPU.Build.0 = Release|Any CPU
+		{199B30DE-FB94-448F-B72C-B68AC0D15CD7}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{199B30DE-FB94-448F-B72C-B68AC0D15CD7}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{199B30DE-FB94-448F-B72C-B68AC0D15CD7}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{199B30DE-FB94-448F-B72C-B68AC0D15CD7}.Release|Any CPU.Build.0 = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(SolutionProperties) = preSolution
+		HideSolutionNode = FALSE
+	EndGlobalSection
+	GlobalSection(ExtensibilityGlobals) = postSolution
+		SolutionGuid = {63615468-1494-4855-A129-3AA6D1450951}
+	EndGlobalSection
+EndGlobal
