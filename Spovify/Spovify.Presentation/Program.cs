@@ -21,9 +21,8 @@ var producer = new Person()
 
 var song = new Song
 {
-    
     Id = Guid.NewGuid(),
-    Name = "Set Fire to the Rain",
+    Name = "Hello",
     Artist = artist,
     Producer = producer,
     Lyricist = artist
@@ -32,3 +31,12 @@ var song = new Song
 var songService = new SongService();
 
 songService.AddSong(song);
+
+// var songsFromText = songService.GetSongs();
+
+// foreach (var songFromText in songsFromText)
+// {
+//     Console.WriteLine($"{songFromText.Name} - {songFromText.Artist.Name}");
+// }
+
+// System.Console.WriteLine();
