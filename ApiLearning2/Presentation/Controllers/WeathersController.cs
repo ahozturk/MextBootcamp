@@ -7,10 +7,10 @@ namespace MyApp.Namespace
     [ApiController]
     public class WeathersController : ControllerBase
     {
-        List<string> summaries1 = new() { "Freezing", "Refrigerate", "Frosty" };
-        List<string> summaries2 = new() { "Cold", "Chiling", };
-        List<string> summaries3 = new() { "Tepid", "Warm", "Balmy", "Mild" };
-        List<string> summaries4 = new() { "Hot", "Scorching", "Sizzling" };
+        List<string> summaries1 = new() {  };
+        List<string> summaries2 = new() {  };
+        List<string> summaries3 = new() {  };
+        List<string> summaries4 = new() {  };
 
         [HttpGet]
         public string GetSummary()
