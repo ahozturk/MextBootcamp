@@ -13,6 +13,7 @@ public class CustomerService
 
     public void Add(Customer customer) // Will return result
     {
+        customer.Id = Guid.NewGuid();
         customers.Add(customer);
     }
 
@@ -27,6 +28,18 @@ public class CustomerService
                 customer.Email = updateCustomer.Email;
                 customer.PhoneNumber = updateCustomer.PhoneNumber;
                 customer.Address = updateCustomer.Address;
+                break;
+            }
+        }
+    }
+
+    public void Delete(Guid id)
+    {
+        foreach (var customer in customers)
+        {
+            if (customer.Id == id)
+            {
+                customers.Remove(customer);
                 break;
             }
         }
