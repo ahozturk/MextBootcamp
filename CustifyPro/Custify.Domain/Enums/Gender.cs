@@ -1,6 +1,6 @@
 ﻿namespace Custify.Domain;
 
-public class Class1
+public class Gender
 {
 
 }
