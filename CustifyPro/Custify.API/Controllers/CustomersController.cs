@@ -1,5 +1,6 @@
 using Custify.Domain;
 using Custify.Domain.Entities;
+using Custify.Domain.Enums;
 using Microsoft.AspNetCore.Http;
 using Microsoft.AspNetCore.Mvc;
 
@@ -18,9 +19,37 @@ namespace MyApp.Namespace
         }
 
         [HttpGet]
-        public List<Customer> GetAll()
+        public List<GetCustomerDto> GetAll()
         {
-            return customerService.GetAll();
+            var customers = customerService.GetAll()
+                .Select(c => new GetCustomerDto
+                {
+                    Id = c.Id,
+                    Name = c.Name,
+                    Surname = c.Surname,
+                    Email = c.Email,
+                    Gender = c.Gender,
+                }).ToList();
+
+            foreach (var customer in customers)
+            {
+                if (customer.Gender == Gender.Male)
+                    customer.GenderText = "Male";
+
+                else if (customer.Gender == Gender.Female)
+                    customer.GenderText = "Female";
+
+                else if (customer.Gender == Gender.Other)
+                    customer.GenderText = "Other";
+
+                else if (customer.Gender == Gender.PreferNotToSay)
+                    customer.GenderText = "Prefer not to say";
+
+                else if (customer.Gender == Gender.Unknown)
+                    customer.GenderText = "Unknown";
+            }
+
+            return customers;
         }
 
         [HttpPut]
