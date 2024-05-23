@@ -29,6 +29,7 @@ namespace MyApp.Namespace
                     Surname = c.Surname,
                     Email = c.Email,
                     Gender = c.Gender,
+                    IdentificationNumber = c.IdentificationNumber,
                 }).ToList();
 
             foreach (var customer in customers)
@@ -53,8 +54,18 @@ namespace MyApp.Namespace
         }
 
         [HttpPut]
-        public void Update(Customer customer)
+        public void Update(UpdateCustomerDto updateCustomerDto)
         {
+            var customer = new Customer
+            {
+                Id = updateCustomerDto.Id,
+                Name = updateCustomerDto.Name,
+                Surname = updateCustomerDto.Surname,
+                Email = updateCustomerDto.Email,
+                PhoneNumber = updateCustomerDto.PhoneNumber,
+                Address = updateCustomerDto.Address,
+            };
+
             customerService.Update(customer);
         }
 
