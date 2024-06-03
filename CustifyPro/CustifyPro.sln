@@ -7,6 +7,8 @@ Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "Custify.Domain", "Custify.D
 EndProject
 Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "Custify.API", "Custify.API\Custify.API.csproj", "{73C80C0E-F87D-4D47-B924-0D799C5FA765}"
 EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Custify.Console", "Custify.Console\Custify.Console.csproj", "{2674747D-6151-4FC6-B679-DCB8E1BCD56F}"
+EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
 		Debug|Any CPU = Debug|Any CPU
@@ -21,6 +23,10 @@ Global
 		{73C80C0E-F87D-4D47-B924-0D799C5FA765}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{73C80C0E-F87D-4D47-B924-0D799C5FA765}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{73C80C0E-F87D-4D47-B924-0D799C5FA765}.Release|Any CPU.Build.0 = Release|Any CPU
+		{2674747D-6151-4FC6-B679-DCB8E1BCD56F}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{2674747D-6151-4FC6-B679-DCB8E1BCD56F}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{2674747D-6151-4FC6-B679-DCB8E1BCD56F}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{2674747D-6151-4FC6-B679-DCB8E1BCD56F}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
