@@ -14,7 +14,7 @@ public class ProductService : IProductService
         File.AppendAllText(filePath, csvFormat);
     }
 
-    public void Delete(Guid id)
+    public void Delete(string id)
     {
         string fullText = File.ReadAllText("/Users/hakan/Documents/GitHub/MextBootcamp/Productify/Productify.Domain/products.txt");
     
@@ -31,7 +31,7 @@ public class ProductService : IProductService
 
             string[] columns = line.Split(",");
 
-            if (columns[0] == id.ToString())
+            if (columns[0] == id)
             {
                 continue;
             }
