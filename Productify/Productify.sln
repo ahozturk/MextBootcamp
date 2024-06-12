@@ -5,6 +5,8 @@ VisualStudioVersion = 17.5.002.0
 MinimumVisualStudioVersion = 10.0.40219.1
 Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "Productify.Domain", "Productify.Domain\Productify.Domain.csproj", "{28EC4245-678C-4BE5-8BB6-8AB62535F89F}"
 EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Productify.Console", "Productify.Console\Productify.Console.csproj", "{ECDCDAEB-2F20-4CA6-85A4-987DCC42EE2E}"
+EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
 		Debug|Any CPU = Debug|Any CPU
@@ -15,6 +17,10 @@ Global
 		{28EC4245-678C-4BE5-8BB6-8AB62535F89F}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{28EC4245-678C-4BE5-8BB6-8AB62535F89F}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{28EC4245-678C-4BE5-8BB6-8AB62535F89F}.Release|Any CPU.Build.0 = Release|Any CPU
+		{ECDCDAEB-2F20-4CA6-85A4-987DCC42EE2E}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{ECDCDAEB-2F20-4CA6-85A4-987DCC42EE2E}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{ECDCDAEB-2F20-4CA6-85A4-987DCC42EE2E}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{ECDCDAEB-2F20-4CA6-85A4-987DCC42EE2E}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
