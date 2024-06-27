@@ -1,34 +1,21 @@
 ﻿using ContactDbApp.Domain;
 
-Console.WriteLine("Hello, World!");
-
 ContactDbAppDbContext context = new();
 
-var lecture1 = new Lecture
+// Product product1 = new()
+// {
+//     Id = Guid.NewGuid(),
+//     Title = "Product 2",
+//     Price = 450,
+// };
+
+// context.Products.Add(product1);
+
+// context.SaveChanges();
+
+var products = context.Products.ToList();
+
+foreach (var product in products)
 {
-    Id = Guid.NewGuid(),
-    Title = "Introduction to EF Core",
-    Type = LectureType.Online,
-};
-
-var lecture2 = new Lecture
-{
-    Id = Guid.NewGuid(),
-    Title = "Introduction to EF Core",
-    Type = LectureType.Online,
-};
-
-context.Lectures.Add(lecture1);
-context.Lectures.Add(lecture2);
-
-context.SaveChanges();
-
-var findLecture = context.Lectures.FirstOrDefault(x => x.Title == "Introduction to EF Core");
-
-findLecture.Type = LectureType.Hybrid;
-
-context.SaveChanges();
-
-context.Lectures.Remove(findLecture);
-
-context.SaveChanges();
+    Console.WriteLine($"{product.Title} - {product.Price}");
+}
