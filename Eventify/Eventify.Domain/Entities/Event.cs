@@ -1,8 +1,7 @@
 ﻿namespace Eventify.Domain;
 
-public class Event
+public class Event : EntityBase
 {
-    public Guid Id { get; set; }
     public string Title { get; set; }
     public string Description { get; set; }
     public DateTimeOffset Date { get; set; }

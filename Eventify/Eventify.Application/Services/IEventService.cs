@@ -6,5 +6,5 @@ public interface IEventService
 {
     public void Add(EventAddDto eventAddDto);
 
-    //eventService.Add(eventAddDto);
+    public List<Event> GetAll();
 }
