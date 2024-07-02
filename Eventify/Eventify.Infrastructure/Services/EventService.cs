@@ -79,4 +79,19 @@ public class EventService : IEventService
 
             return eventData;
     }
+
+    public void Update(Guid id, EventUpdateDto eventUpdateDto)
+    {
+        var existingEvent = _dbContext.Events
+            .FirstOrDefault(x => x.Id == id);
+
+        if (existingEvent == null)
+            throw new Exception("Event not found");
+
+        existingEvent.Title = eventUpdateDto.Title;
+        existingEvent.Description = eventUpdateDto.Description;
+        existingEvent.UpdatedAt = DateTime.UtcNow;
+
+        _dbContext.SaveChanges();
+    }
 }
