@@ -23,5 +23,13 @@ namespace MyApp.Namespace
 
             return Ok(events);
         }
+
+        [HttpPost]
+        public IActionResult Create(EventAddDto eventAddDto)
+        {
+            _eventService.Add(eventAddDto);
+
+            return Ok();
+        }
     }
 }
