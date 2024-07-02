@@ -1,16 +1,63 @@
 ﻿using Eventify.Application;
+using Eventify.Domain;
 
 namespace Eventify.Infrastructure;
 
 public class EventService : IEventService
 {
+    private readonly EventifyDbContext _dbContext;
+
+    public EventService(EventifyDbContext dbContext)
+    {
+        _dbContext = dbContext;
+    }
+
     public void Add(EventAddDto eventAddDto)
     {
-        throw new NotImplementedException();
+        var newEvent = new Event
+        {
+            Id = Guid.NewGuid(),
+            CreatedAt = DateTime.UtcNow,
+            Title = eventAddDto.Title,
+            Description = eventAddDto.Description,
+            Date = eventAddDto.Date,
+            Location = new Address
+            {
+                Street = eventAddDto.Location.Street,
+                City = eventAddDto.Location.City,
+                District = eventAddDto.Location.District,
+                No = eventAddDto.Location.No,
+                Note = eventAddDto.Location.Note,
+                PostalCode = eventAddDto.Location.PostalCode,
+            },
+            Type = eventAddDto.Type
+        };
+
+        _dbContext.Events.Add(newEvent);
+
+        _dbContext.SaveChanges();
     }
 
     public List<EventGetAllDto> GetAll()
     {
-        throw new NotImplementedException();
+        return _dbContext.Events
+        .Select(x => new EventGetAllDto()
+        {
+            Id = x.Id,
+            Title = x.Title,
+            Description = x.Description,
+            Date = x.Date,
+            Location = new Address
+            {
+                Street = x.Location.Street,
+                City = x.Location.City,
+                District = x.Location.District,
+                No = x.Location.No,
+                Note = x.Location.Note,
+                PostalCode = x.Location.PostalCode,
+            },
+            Type = x.Type
+        })
+        .ToList();
     }
 }
