@@ -9,6 +9,8 @@ Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Eventify.Domain", "Eventify
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Eventify.Infrastructure", "Eventify.Infrastructure\Eventify.Infrastructure.csproj", "{6EA80F89-AF69-46A7-ABCA-6D60B63AB0C1}"
 EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Eventify.WebAPI", "Eventify.WebAPI\Eventify.WebAPI.csproj", "{4C13EF30-EA84-4904-94A4-118B2E9BDF3E}"
+EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
 		Debug|Any CPU = Debug|Any CPU
@@ -27,6 +29,10 @@ Global
 		{6EA80F89-AF69-46A7-ABCA-6D60B63AB0C1}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{6EA80F89-AF69-46A7-ABCA-6D60B63AB0C1}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{6EA80F89-AF69-46A7-ABCA-6D60B63AB0C1}.Release|Any CPU.Build.0 = Release|Any CPU
+		{4C13EF30-EA84-4904-94A4-118B2E9BDF3E}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{4C13EF30-EA84-4904-94A4-118B2E9BDF3E}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{4C13EF30-EA84-4904-94A4-118B2E9BDF3E}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{4C13EF30-EA84-4904-94A4-118B2E9BDF3E}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
