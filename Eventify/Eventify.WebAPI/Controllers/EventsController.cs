@@ -1,4 +1,5 @@
 using Eventify.Application;
+using Eventify.Infrastructure;
 using Microsoft.AspNetCore.Http;
 using Microsoft.AspNetCore.Mvc;
 

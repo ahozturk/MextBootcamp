@@ -16,5 +16,9 @@ public class EventifyDbContext : DbContext
     {
         modelBuilder.Entity<Event>()
             .OwnsOne(e => e.Location);
+
+        modelBuilder.SeedEvent();
+                
+                
     }
 }

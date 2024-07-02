@@ -33,6 +33,11 @@ namespace Eventify.Infrastructure.Migrations
                 {
                     table.PrimaryKey("PK_Events", x => x.Id);
                 });
+
+            migrationBuilder.InsertData(
+                table: "Events",
+                columns: new[] { "Id", "Location_City", "Location_District", "Location_No", "Location_Note", "Location_PostalCode", "Location_Street", "CreatedAt", "Date", "Description", "Title", "Type", "UpdatedAt" },
+                values: new object[] { new Guid("8e90c53b-bf21-4f3f-88ad-dc23c99c5137"), "City 1", "District 1", "12", "Near by Stadium", "12345", "Street 1", new DateTime(2024, 7, 2, 11, 55, 58, 9, DateTimeKind.Utc).AddTicks(4440), new DateTimeOffset(new DateTime(2024, 7, 3, 11, 55, 58, 9, DateTimeKind.Unspecified).AddTicks(4440), new TimeSpan(0, 0, 0, 0, 0)), "Event 1 Description", "Event 1", 2, null });
         }
 
         /// <inheritdoc />

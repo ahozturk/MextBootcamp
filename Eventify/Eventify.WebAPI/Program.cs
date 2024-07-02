@@ -11,6 +11,7 @@ builder.Services.AddEndpointsApiExplorer();
 builder.Services.AddSwaggerGen();
 
 builder.Services.AddScoped<IEventService, EventService>();
+
 builder.Services.AddDbContext<EventifyDbContext>();
 
 var app = builder.Build();

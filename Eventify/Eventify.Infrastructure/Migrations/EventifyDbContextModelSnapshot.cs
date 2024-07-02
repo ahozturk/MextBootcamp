@@ -51,6 +51,17 @@ namespace Eventify.Infrastructure.Migrations
                     b.HasKey("Id");
 
                     b.ToTable("Events");
+
+                    b.HasData(
+                        new
+                        {
+                            Id = new Guid("8e90c53b-bf21-4f3f-88ad-dc23c99c5137"),
+                            CreatedAt = new DateTime(2024, 7, 2, 11, 55, 58, 9, DateTimeKind.Utc).AddTicks(4440),
+                            Date = new DateTimeOffset(new DateTime(2024, 7, 3, 11, 55, 58, 9, DateTimeKind.Unspecified).AddTicks(4440), new TimeSpan(0, 0, 0, 0, 0)),
+                            Description = "Event 1 Description",
+                            Title = "Event 1",
+                            Type = 2
+                        });
                 });
 
             modelBuilder.Entity("Eventify.Domain.Event", b =>
@@ -90,6 +101,18 @@ namespace Eventify.Infrastructure.Migrations
 
                             b1.WithOwner()
                                 .HasForeignKey("EventId");
+
+                            b1.HasData(
+                                new
+                                {
+                                    EventId = new Guid("8e90c53b-bf21-4f3f-88ad-dc23c99c5137"),
+                                    City = "City 1",
+                                    District = "District 1",
+                                    No = "12",
+                                    Note = "Near by Stadium",
+                                    PostalCode = "12345",
+                                    Street = "Street 1"
+                                });
                         });
 
                     b.Navigation("Location")
