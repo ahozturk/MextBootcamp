@@ -17,11 +17,19 @@ namespace MyApp.Namespace
         }
 
         [HttpGet]
-        public IActionResult GetEvents()
+        public IActionResult GetAll()
         {
             var events = _eventService.GetAll();
 
             return Ok(events);
+        }
+
+        [HttpGet("{id}")]
+        public IActionResult GetById(Guid id)
+        {
+            var eventData = _eventService.GetById(id);
+
+            return Ok(eventData);
         }
 
         [HttpPost]

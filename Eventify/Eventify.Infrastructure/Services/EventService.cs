@@ -1,5 +1,6 @@
 ﻿using Eventify.Application;
 using Eventify.Domain;
+using Microsoft.EntityFrameworkCore;
 
 namespace Eventify.Infrastructure;
 
@@ -41,6 +42,7 @@ public class EventService : IEventService
     public List<EventGetAllDto> GetAll()
     {
         return _dbContext.Events
+        .AsNoTracking()
         .Select(x => new EventGetAllDto()
         {
             Id = x.Id,
@@ -59,5 +61,22 @@ public class EventService : IEventService
             Type = x.Type
         })
         .ToList();
+    }
+
+    public EventGetByIdDto GetById(Guid id)
+    {
+        var eventData = _dbContext.Events
+            .AsNoTracking()
+            .Select(x => new EventGetByIdDto()
+            {
+                Id = x.Id,
+                Title = x.Title,
+                Description = x.Description,
+                Date = x.Date,
+                Location = x.Location,
+                Type = x.Type,
+            }).FirstOrDefault(x => x.Id == id);
+
+            return eventData;
     }
 }
