@@ -1,4 +1,4 @@
-﻿namespace Eventity.Domain;
+﻿namespace Eventify.Domain;
 
 public class Address
 {
