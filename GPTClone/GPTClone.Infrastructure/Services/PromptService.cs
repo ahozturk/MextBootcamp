@@ -4,6 +4,13 @@ namespace GPTClone.Infrastructure;
 
 public class PromptService : IPromptService
 {
+    private readonly GPTCloneDbContext _dbContext;
+
+    public PromptService(GPTCloneDbContext dbContext)
+    {
+        _dbContext = dbContext;
+    }
+
     public void Add(PromptAddDto promptAddDto)
     {
         throw new NotImplementedException();
