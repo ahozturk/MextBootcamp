@@ -21,5 +21,12 @@ namespace MyApp.Namespace
             var prompts = _promptService.GetAll();
             return Ok(prompts);
         }
+
+        [HttpPost]
+        public IActionResult Create(PromptAddDto promptAddDto)
+        {
+            _promptService.Add(promptAddDto);
+            return Ok();
+        }
     }
 }
