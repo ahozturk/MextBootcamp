@@ -16,6 +16,7 @@
 
   <ItemGroup>
     <ProjectReference Include="..\GPTClone.Application\GPTClone.Application.csproj" />
+    <ProjectReference Include="..\GPTClone.Infrastructure\GPTClone.Infrastructure.csproj" />
   </ItemGroup>
 
 </Project>

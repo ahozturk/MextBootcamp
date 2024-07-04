@@ -15,6 +15,11 @@ namespace MyApp.Namespace
             _promptService = promptService;
         }
 
-        
+        [HttpGet]
+        public IActionResult GetAll()
+        {
+            var prompts = _promptService.GetAll();
+            return Ok(prompts);
+        }
     }
 }
