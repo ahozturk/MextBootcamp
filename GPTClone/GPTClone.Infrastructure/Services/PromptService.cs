@@ -41,11 +41,31 @@ public class PromptService : IPromptService
 
     public List<PromptGetAllDto> GetAll()
     {
-        throw new NotImplementedException();
+        var prompts = _dbContext.Prompts
+            .Select(x => new PromptGetAllDto
+            {
+                Id = x.Id,
+                CreatedBy = x.CreatedBy,
+                Text = x.Text,
+                Response = x.Response
+            })
+            .ToList();
+
+        return prompts;
     }
 
     public PromptGetByIdDto GetById(Guid id)
     {
-        throw new NotImplementedException();
+        var prompt = _dbContext.Prompts
+            .Select(x => new PromptGetByIdDto(){
+                Id = x.Id,
+                CreatedAt = x.CreatedAt,
+                CreatedBy = x.CreatedBy,
+                Text = x.Text,
+                Response = x.Response
+            })
+            .FirstOrDefault(x => x.Id == id);
+
+        return prompt;
     }
 }
