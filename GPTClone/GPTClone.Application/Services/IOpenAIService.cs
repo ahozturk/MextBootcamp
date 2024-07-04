@@ -2,5 +2,5 @@
 
 public interface IOpenAIService
 {
-    void GetResponse(string text);
+    string GetResponse(string text);
 }

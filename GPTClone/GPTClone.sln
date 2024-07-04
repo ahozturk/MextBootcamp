@@ -9,6 +9,8 @@ Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "GPTClone.Application", "GPT
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "GPTClone.Infrastructure", "GPTClone.Infrastructure\GPTClone.Infrastructure.csproj", "{7ED8D559-916D-446D-AF0F-F6E4E7D047F9}"
 EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "GPTClone.API", "GPTClone.API\GPTClone.API.csproj", "{1E37C585-FA32-4379-9155-82760EE852CD}"
+EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
 		Debug|Any CPU = Debug|Any CPU
@@ -27,6 +29,10 @@ Global
 		{7ED8D559-916D-446D-AF0F-F6E4E7D047F9}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{7ED8D559-916D-446D-AF0F-F6E4E7D047F9}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{7ED8D559-916D-446D-AF0F-F6E4E7D047F9}.Release|Any CPU.Build.0 = Release|Any CPU
+		{1E37C585-FA32-4379-9155-82760EE852CD}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{1E37C585-FA32-4379-9155-82760EE852CD}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{1E37C585-FA32-4379-9155-82760EE852CD}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{1E37C585-FA32-4379-9155-82760EE852CD}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
