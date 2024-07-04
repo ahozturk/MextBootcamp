@@ -1,0 +1,31 @@
+﻿
+Microsoft Visual Studio Solution File, Format Version 12.00
+# Visual Studio Version 17
+VisualStudioVersion = 17.5.002.0
+MinimumVisualStudioVersion = 10.0.40219.1
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "GPTClone.Domain", "GPTClone.Domain\GPTClone.Domain.csproj", "{F5564926-F3C9-4ADA-81F5-71A766BA3230}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "GPTClone.Application", "GPTClone.Application\GPTClone.Application.csproj", "{1967FA6F-D717-4113-8058-B6CC8C1B5BB2}"
+EndProject
+Global
+	GlobalSection(SolutionConfigurationPlatforms) = preSolution
+		Debug|Any CPU = Debug|Any CPU
+		Release|Any CPU = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(ProjectConfigurationPlatforms) = postSolution
+		{F5564926-F3C9-4ADA-81F5-71A766BA3230}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{F5564926-F3C9-4ADA-81F5-71A766BA3230}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{F5564926-F3C9-4ADA-81F5-71A766BA3230}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{F5564926-F3C9-4ADA-81F5-71A766BA3230}.Release|Any CPU.Build.0 = Release|Any CPU
+		{1967FA6F-D717-4113-8058-B6CC8C1B5BB2}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{1967FA6F-D717-4113-8058-B6CC8C1B5BB2}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{1967FA6F-D717-4113-8058-B6CC8C1B5BB2}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{1967FA6F-D717-4113-8058-B6CC8C1B5BB2}.Release|Any CPU.Build.0 = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(SolutionProperties) = preSolution
+		HideSolutionNode = FALSE
+	EndGlobalSection
+	GlobalSection(ExtensibilityGlobals) = postSolution
+		SolutionGuid = {29CF7F58-DC6E-4D1C-9500-1C07FC765C93}
+	EndGlobalSection
+EndGlobal
