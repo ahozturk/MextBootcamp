@@ -33,9 +33,11 @@ namespace MyApp.Namespace
         }
 
         [HttpGet("[action]")]
-        public IActionResult AskToGPT(string promptText, string createdBy)
+        public async Task<IActionResult> AskToGPT(string promptText, string createdBy)
         {
-            return Ok();
+            var response = await _openAIService.GetResponseAsync(promptText);
+
+            return Ok(response);
         }
     }
 }
