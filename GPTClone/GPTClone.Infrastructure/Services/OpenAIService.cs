@@ -30,6 +30,13 @@ public class OpenAIService : IOpenAIService
         var response = await client.PostAsync(url, content);
         var responseString = await response.Content.ReadAsStringAsync();
 
-        return responseString;
+        using JsonDocument doc = JsonDocument.Parse(responseString);
+        var contentString = doc.RootElement
+                          .GetProperty("choices")[0]
+                          .GetProperty("message")
+                          .GetProperty("content")
+                          .GetString();
+
+        return contentString;
     }
 }
