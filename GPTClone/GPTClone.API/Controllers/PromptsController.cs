@@ -37,6 +37,15 @@ namespace MyApp.Namespace
         {
             var response = await _openAIService.GetResponseAsync(promptText);
 
+            var promptAddDto = new PromptAddDto
+            {
+                Text = promptText,
+                Response = response,
+                CreatedBy = createdBy,
+            };
+
+            _promptService.Add(promptAddDto);
+
             return Ok(response);
         }
     }

@@ -17,6 +17,9 @@ public class OpenAIService : IOpenAIService
             model = "gpt-3.5-turbo",
             messages = new[]
             {
+                new { role = "user", content = "Cevabını verirken 200 karakteri geçme." },
+                new { role = "user", content = "Güzel espriler yapan birisi gibi davran. Aynı zamanda Türkçe'yi çok güzel kullanman gerekiyor." },
+                new { role = "user", content = "Verdiğin cevapları çok fakir biri olarak cevapla!" },
                 new { role = "user", content = text }
             },
             temperature = 0.7
