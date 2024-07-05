@@ -10,5 +10,6 @@ public static class ServiceRegistration
         services.AddDbContext<GPTCloneDbContext>();
 
         services.AddScoped<IPromptService, PromptService>();
+        services.AddScoped<IOpenAIService, OpenAIService>();
     }
 }
