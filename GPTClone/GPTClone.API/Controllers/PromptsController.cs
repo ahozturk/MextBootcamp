@@ -1,4 +1,5 @@
 using GPTClone.Application;
+using GPTClone.Infrastructure;
 using Microsoft.AspNetCore.Http;
 using Microsoft.AspNetCore.Mvc;
 
@@ -34,18 +35,7 @@ namespace MyApp.Namespace
         [HttpGet("[action]")]
         public IActionResult AskToGPT(string promptText, string createdBy)
         {
-            var response = _openAIService.GetResponse(promptText);
-            
-            var promptAddDto = new PromptAddDto
-            {
-                CreatedBy = createdBy,
-                Text = promptText,
-                Response = response,
-            };
-
-            _promptService.Add(promptAddDto);
-
-            return Ok(promptAddDto);
+            return Ok();
         }
     }
 }

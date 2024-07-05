@@ -2,5 +2,5 @@
 
 public interface IOpenAIService
 {
-    string GetResponse(string text);
+    Task<string> GetResponseAsync(string text);
 }
